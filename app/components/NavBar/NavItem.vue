@@ -11,7 +11,7 @@ const linkTo = computed(() => {
       : { params: { slug: props.navItem.page.slug } };
 });
 
-const isExternal = computed(() => props.navItem.page.external_link);
+const isExternal = computed(() => props.navItem.page.external_link ?? false);
 const hover = ref(false);
 </script>
 
