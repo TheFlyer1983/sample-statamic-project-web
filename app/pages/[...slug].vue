@@ -34,34 +34,7 @@ useHead({
 <template>
   <div v-if="pageData && navigationData?.length">
     <NavBar :navigation-data />
-    <!-- <nav class="flex flex-row justify-center space-x-4">
-      <NuxtLink
-        v-for="item in navigationData"
-        :key="item.page.id"
-        :to="
-          !item.page.slug
-            ? item.page.url
-            : item.page.slug === 'home'
-              ? '/'
-              : { params: { slug: item.page.slug } }
-        "
-        :external="!item.page.slug"
-      >
-        {{ item.page.title }}
-      </NuxtLink>
-    </nav> -->
-    <div>
-      <h1>{{ pageData.title }}</h1>
-    </div>
-    <!-- <div class="grid grid-cols-2 gap-4">
-      <div>
-        <p>Route</p>
-        <pre class="whitespace-pre-wrap">{{ routeData }}</pre>
-      </div>
-      <div>
-        <p>Page</p>
-        <pre class="whitespace-pre-wrap">{{ pageData }}</pre>
-      </div>
-    </div> -->
+
+    <MainContent :page-data />
   </div>
 </template>

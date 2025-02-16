@@ -7,8 +7,12 @@ defineProps<{
 <template>
   <nav
     v-if="navigationData.length"
-    class="flex flex-row justify-center space-x-4"
+    class="relative flex flex-row justify-center bg-amber-50"
   >
-    <NavItem v-for="item in navigationData" :key="item.page.id" :nav-item="item" />
+    <NavItem
+      v-for="item in navigationData"
+      :key="item.page.id"
+      :nav-item="item"
+    />
   </nav>
 </template>
